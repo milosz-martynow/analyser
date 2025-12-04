@@ -1,11 +1,8 @@
 from pathlib import Path
 
 import cv2
-import matplotlib
 
 from analyser.environment import IMAGES
-
-matplotlib.use("TkAgg", force=False)
 
 from analyser.line_spread_function import lsf
 from analyser.modulation_transfer_function import mtf_analysis

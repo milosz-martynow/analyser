@@ -11,8 +11,27 @@ Fourier-domain computation of MTF from LSF derivatives.
 ## Workflow
 The toolkit extracts intensity profiles along edge points pairs across calibration targets images.
 LSF is calculated as derivative of intensity across such line with respect to pixelwise relative distance.
+MTF is calculated as fourier transform of LSF, further calculations are performed on this frequency domain spectrum.
 Calibration targets are embedded in aerial imagery, which were manually extracted.
 Aggregated results metrics are treated as statistical measures of image quality.
+
+## Run
+To run the MTF analysis just build and activate virtual environment and install module (information below) 
+and after first installation step run main script:
+
+### first run:
+```commandline
+py.exe -m venv .venv
+.venv\Scripts\activate
+pip.exe install -e ".[all]"
+python.exe main.py
+```
+
+### later runs:
+```commandline
+python.exe main.py
+```
+Rest of maintenance information are stored in this README.md file, in Dependencies section.
 
 ## Results
 Unfortunetley for aerial test images statistical results have enormous standard deviation.
